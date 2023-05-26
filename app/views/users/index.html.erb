@@ -1,0 +1,11 @@
+<% if user_signed_in? %>
+  <%= "Welcome #{current_user.name}" %>
+  <%= link_to "Edit you profile", edit_user_registration_path,  class: "sign" %>
+<% else %>
+  <%= link_to "Sign in", user_session_path,  class: "sign" %>
+  <%= link_to "Sign up", new_user_registration_path,  class: "sign" %>
+<% end %>
+
+<% @users.each do |user| %>
+  <%= render "user", user: user %>
+<% end %>

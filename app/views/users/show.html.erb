@@ -1,0 +1,29 @@
+<div class="user_container">
+  <div class="picture_container">
+    <%= image_tag(@user.photo, class: "img_profile") %>
+  </div>
+  <div class="user_name_container">
+    <h3> User: <%= @user.name %> </h3>
+    <p> Number of posts: <%= @user.post_counter %> </picture_container>
+  </div>
+</div>
+
+<div class="bio">
+  <p>Bio</p>
+  <p> <%= @user.bio %> </p>
+</div>
+
+  <% @user.last_three_posts.each do |post| %>
+    <div class="last_post">
+      <a id="last_post_a" href=<%= "/users/#{@user.id}/posts/#{post.id}" %>>
+        <p><%= post.title %></p>
+        <p class="post_text"><%= post.text.slice(0..60) %>...</p>
+      </a>
+      <div class="extra_container">
+        <p>Comments: <%= post.comments_counter %></p>
+        <p>Likes: <%= post.likes_counter %></p>
+      </div>
+    </div>
+  <% end %>
+
+<%= link_to "See all posts", "/users/#{@user.id}/posts",  class: "all_posts_btn" %>

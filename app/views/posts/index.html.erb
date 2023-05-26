@@ -1,0 +1,29 @@
+<div class="user_container">
+  <div class="picture_container">
+    <%= image_tag(@user.photo) %>
+  </div>
+  <div class="user_name_container">
+    <h3> User: <%= @user.name %> </h3>
+    <p> Number of posts: <%= @user.post_counter %> </p>
+  </div>
+</div>
+  <% @user.posts.each do |post| %>
+    <div class="last_post">
+      <a class="last_post_a" href=<%= "/users/#{@user.id}/posts/#{post.id}" %>>
+        <p><%= post.title %></p>
+        <p class="post_text"><%= post.text %></p>
+      </a>
+      <div class="extra_container">
+          <p>Comments: <%= post.comments_counter %></p>
+          <p>Likes: <%= post.likes_counter %></p>
+      </div>
+    </div>
+    <div class="comments_container">
+      <% post.last_five_comments.includes(:author).each do |comment| %>
+        <p class="comments_container_p"><%= "#{comment.author.name}: #{comment.text}" %></p>
+      <% end %>
+    </div>
+    </div>
+  <% end %>
+
+<a class="pagination" href="#">Pagination</a>

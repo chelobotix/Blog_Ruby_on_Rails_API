@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.user_container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.user_container .picture_container {
+  height: 90px;
+  border: solid 1px #000;
+  margin-right: 15px;
+}
+
+.user_container .picture_container img {
+  width: 100px;
+  height: 90px;
+}
+
+.user_container .user_name_container {
+  display: flex;
+  width: 25%;
+  height: 90px;
+  align-items: center;
+  border: solid 1px #000;
+}
+
+.user_container .user_name_container h3 {
+  margin-left: 20px;
+}
+
+.user_container .user_name_container p {
+  align-self: flex-end;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.bio {
+  border: solid 1px #000;
+  width: 31.2%;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+.last_post {
+  display: flex;
+  border: solid 1px #000;
+  width: 31.2%;
+  padding: 0 10px;
+  margin-bottom: 2px;
+}
+
+.last_post a {
+  width: 80%;
+}
+
+.last_post a .post_text {
+  width: 70%;
+  font-size: 20px;
+}
+
+.last_post .extra_container {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.last_post .extra_container p {
+  font-size: 10px;
+}
+
+.all_posts_btn {
+  text-align: center;
+  width: 10%;
+  margin-left: 10%;
+  margin-top: 10px;
+  padding: 10px;
+  border: solid 1px #000;
+}
+
+.comments_container {
+  border: solid 1px #000;
+  width: 31.2%;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+.comments_container_p {
+  margin: 2px;
+  font-size: 15px;
+}
+
+.post_container {
+  display: flex;
+  flex-wrap: wrap;
+  border: solid 1px #000;
+  width: 31.2%;
+  padding: 0 10px;
+}
+
+.post_content {
+  margin: 5px;
+  margin-bottom: 20px;
+}
+
+.post_container .extra_container {
+  display: flex;
+  margin-left: auto;
+  gap: 10px;
+}
+
+.sign-in-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.field,
+.actions {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form_field {
+  width: 40%;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+}
