@@ -1,0 +1,72 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/users/:id/posts":
+    get:
+      summary: Retrieves all Posts
+      tags:
+      - Post
+      parameters:
+      - user_id: id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: name found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  created_at:
+                    type: string
+                  updated_at:
+                    type: string
+                  title:
+                    type: string
+                  text:
+                    type: text
+                  comments_counter:
+                    type: integer
+                  likes_counter:
+                    type: integer
+                  author_id:
+                    type: integer
+                required:
+                - id
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  created_at:
+                    type: string
+                  updated_at:
+                    type: string
+                  title:
+                    type: string
+                  text:
+                    type: text
+                  comments_counter:
+                    type: integer
+                  likes_counter:
+                    type: integer
+                  author_id:
+                    type: integer
+                required:
+                - id
+        '404':
+          description: post not found
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com

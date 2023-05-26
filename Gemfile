@@ -9,6 +9,10 @@ gem 'rails', '~> 7.0.4', '>= 7.0.4.3'
 # Devise
 gem 'devise'
 
+# Rswag
+gem 'rswag'
+gem 'rswag-api'
+
 # Cancancan
 gem 'cancancan'
 
