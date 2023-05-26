@@ -8,8 +8,8 @@
   <img src="https://user-images.githubusercontent.com/65084923/220200035-01fa5e08-af6a-495b-b597-55157a2b7d95.gif" alt="logo" />
   <br/>
 
-  <h3><b>Blog - Ruby on Rails</b></h3>
-  <h3><b>Blog - Ruby on Rails - ROR Microverse Project Module 5</b></h3>
+  <h3><b>Blog - Ruby on Rails API V1</b></h3>
+  <h3><b>Blog - Ruby on Rails API V1 - ROR Microverse Project Module 5</b></h3>
 
 </div>
 
@@ -32,9 +32,9 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 Blog - Ruby on Rails - ROR Microverse Project Module 5<a name="about-project"></a>
+# 📖 Blog - Ruby on Rails API V1 - ROR Microverse Project Module 5<a name="about-project"></a>
 
-> Blog - Ruby on Rails developed with Ruby on Rails.
+> Blog API V1 - Ruby on Rails developed with Ruby on Rails.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -52,16 +52,8 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Migration DB feature: tables and Relations**
-- **Models and Active Records**
-- **Controllers and Routes for Users and Posts**
-- **Rspec Test of all models and controllers**
-- **Views for Users and Post controllers**
-- **Forms for Add Post, Comments and give Like**
-- **Capybara system tests**
-- **User Authentication**
-- **User roles Authorization**
-- **Delete Post and Comments functionality**
+- **API endpoint for Posts and Comments**
+- **POST comments functionality**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -74,7 +66,7 @@ To get a local copy up and use as a template, follow these steps.
 Clone this repository to your desired folder:
 
 ```sh
-  https://github.com/chelobotix/Blog-Ruby-on-Rails.git
+  https://github.com/chelobotix/Blog_Ruby_on_Rails_API.git
 ```
 
 To install the necessary dependencies, you should run:
@@ -110,7 +102,7 @@ To fix all Linter error automatically
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **More Features**
+- [ ] **More End Points**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

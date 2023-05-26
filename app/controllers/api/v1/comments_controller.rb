@@ -1,10 +1,21 @@
-class CommentsController < ApplicationController
+class Api::V1::CommentsController < ApplicationController
   def new; end
+
+  def index
+    comments = Post.find(params[:post_id]).comments
+    render json: comments, status: 200
+  end
 
   def create
     comment = Comment.new(post_params)
-    flash[:error] = 'Error. Please try again' unless comment.save
-    redirect_to user_post_path(params[:comment][:post_author_id], params[:comment][:post_id])
+    if comment.save
+      render json: comment, status: 200
+    else
+      render json: {
+        error: 'error creating...'
+      }
+
+    end
   end
 
   def destroy
@@ -20,7 +31,7 @@ class CommentsController < ApplicationController
   private
 
   def post_params
-    params.require(:comment).permit(:text, :post_id).merge(
+    params.require(:comment).permit(:text).merge(
       author_id: current_user.id,
       post_id: params[:comment][:post_id]
     )
