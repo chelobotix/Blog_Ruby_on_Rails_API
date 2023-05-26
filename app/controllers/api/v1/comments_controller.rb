@@ -12,7 +12,7 @@ class Api::V1::CommentsController < ApplicationController
       render json: comment, status: 200
     else
       render json: {
-        error: "error creating..."
+        error: 'error creating...'
       }
 
     end
